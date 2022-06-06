@@ -33,7 +33,7 @@ session_start();
         
       <a href="my_cart.php" class="btn btn-outline-success ms-auto mr">My Cart</a>
 
-      <a href="admin_login.php" class="btn btn-primary">Admin Login</a>
+      <a href="admin/index.php" class="btn btn-primary">Admin Login</a>
 
     </div>
   </div>

@@ -3,7 +3,8 @@ include_once 'header.php';
 ?>
 
 <div class="container">
-<h1 class="heading text-center">Shopping Cart</h1>
+<h1 class="heading text-center"><b> <u>Cart Items </u></b> </h1>
+<div class="pt-5">
 <table class="table table-bordered">
   <thead>
     <th>Name</th>
@@ -43,4 +44,5 @@ include_once 'header.php';
       </tr>
   </tbody>
 </table>
+</div>
 </div>

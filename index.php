@@ -19,7 +19,7 @@ include_once 'header.php';
 <body>
     <div class="container">
         <div class="text-center text-primary pt-5">
-            <h1 class="heading">Custom Pc Builder</h1>
+            <h1 class="heading"><b><u> Custom Pc Builder</u> </b></h1>
         </div>
         <hr>
         <h1 class="mt-5">Choose PC Parts</h1>

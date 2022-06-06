@@ -13,7 +13,7 @@
     <div class="container">
     <div class="row">
         <div class="col-md-2 py-5">
-        <a href="../index.html" class="btn btn-primary  float-start">Dashboard</a> 
+        <a href="../index.php" class="btn btn-primary  float-start">Dashboard</a> 
         </div>
         <div class="col-md-8">
             <h1 class="text-center py-5">Storage List</h1> 
