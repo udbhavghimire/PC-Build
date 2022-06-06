@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    font-size: 54px;
+}
+.padding{
+    padding-top: 200px;
+}
+.mr{
+    margin-right: 300px;
+}
