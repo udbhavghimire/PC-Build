@@ -1,5 +1,16 @@
 <?php
 include_once 'header.php';
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:login.php');
+};
+
+if (isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:login.php');
+};
 ?>
 
 
@@ -18,6 +29,24 @@ include_once 'header.php';
 
 <body>
     <div class="container">
+        <div class="user-profile">
+
+            <?php
+            $select_user = mysqli_query($conn, "SELECT * FROM `user_info` WHERE id = '$user_id'") or die('query failed');
+            if (mysqli_num_rows($select_user) > 0) {
+                $fetch_user = mysqli_fetch_assoc($select_user);
+            };
+            ?>
+
+            <p> username : <span><?php echo $fetch_user['name']; ?></span> </p>
+            <p> email : <span><?php echo $fetch_user['email']; ?></span> </p>
+            <div class="flex">
+                <a href="login.php" class="btn">login</a>
+                <a href="register.php" class="option-btn">register</a>
+                <a href="index.php?logout=<?php echo $user_id; ?>" onclick="return confirm('are your sure you want to logout?');" class="delete-btn">logout</a>
+            </div>
+
+        </div>
         <div class="text-center text-primary pt-5">
             <h1 class="heading"><b><u> Custom Pc Builder</u> </b></h1>
         </div>
@@ -34,8 +63,8 @@ include_once 'header.php';
                     </div>
                 </div>
             </div>
-        
-        <div class="col-md-4">
+
+            <div class="col-md-4">
                 <div class="card">
                     <img class="card-img-top" src="images/motherboard.jpg" class="img-fluid" alt="Card image cap">
                     <div class="card-body">
@@ -75,7 +104,7 @@ include_once 'header.php';
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
     </div>
     <div class="padding"></div>
 </body>
